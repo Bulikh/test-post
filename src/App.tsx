@@ -42,9 +42,9 @@ function App() {
   useEffect(() => {
     console.log('iframe loaded');
     const postMessageCallback = function (e: MessageEvent<IData>) {
+      console.log('got post message', e);
       const origin = e.origin;
       if(!origin.includes('tix') || !origin.includes('fansight')) return;
-      console.log('got post message', e);
       const { type, domain, ...rest } = e.data;
       if (type === MessageType.updateCookie) {
         console.log('set cookies');
@@ -54,7 +54,7 @@ function App() {
           domain,
           path: '/',
           secure: true,
-          sameSite: 'None'
+          sameSite: 'None',
         })
         console.log('get cookies', Cookies.get('customerPrefill'));
       }
