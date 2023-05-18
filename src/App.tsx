@@ -44,9 +44,9 @@ function App() {
     const postMessageCallback = function (e: MessageEvent<IData>) {
       console.log('got post message', e);
       const origin = e.origin;
-      if(!origin.includes('tix') || !origin.includes('fansight')) return;
+      console.log(origin.includes('tix'), origin.includes('fansight'))
       const { type, domain, ...rest } = e.data;
-      if (type === MessageType.updateCookie) {
+      if ((origin.includes('tix') || origin.includes('fansight')) && type === MessageType.updateCookie) {
         console.log('set cookies');
         Cookies.set('customerPrefill', `${encodeURIComponent(JSON.stringify({
           ...rest,
