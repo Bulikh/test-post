@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/bulikh.github.io/test-post/static/css/main.073c9b0a.css",
+    "main.js": "/bulikh.github.io/test-post/static/js/main.a23778d0.js",
+    "static/js/787.314c4558.chunk.js": "/bulikh.github.io/test-post/static/js/787.314c4558.chunk.js",
+    "index.html": "/bulikh.github.io/test-post/index.html",
+    "main.073c9b0a.css.map": "/bulikh.github.io/test-post/static/css/main.073c9b0a.css.map",
+    "main.a23778d0.js.map": "/bulikh.github.io/test-post/static/js/main.a23778d0.js.map",
+    "787.314c4558.chunk.js.map": "/bulikh.github.io/test-post/static/js/787.314c4558.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.073c9b0a.css",
+    "static/js/main.a23778d0.js"
+  ]
+}
