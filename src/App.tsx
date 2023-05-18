@@ -42,6 +42,8 @@ function App() {
   useEffect(() => {
     console.log('iframe loaded');
     const postMessageCallback = function (e: MessageEvent<IData>) {
+      const origin = e.origin;
+      if(!origin.includes('tix') || !origin.includes('fansight')) return;
       console.log('got post message', e);
       const { type, domain, ...rest } = e.data;
       if (type === MessageType.updateCookie) {
